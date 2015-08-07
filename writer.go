@@ -4,8 +4,8 @@ import (
 	"log"
 	"os"
 
-	"code.google.com/p/gopacket/layers"
-	"code.google.com/p/gopacket/pcapgo"
+	"github.com/google/gopacket/layers"
+	"github.com/google/gopacket/pcapgo"
 )
 
 // Open and create a pcap output file

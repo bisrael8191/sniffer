@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"code.google.com/p/gopacket"
-	"code.google.com/p/gopacket/layers"
+	"github.com/google/gopacket"
+	"github.com/google/gopacket/layers"
 )
 
 type Sniffer interface {
@@ -63,12 +63,12 @@ func Listen(config *Config) error {
 		}
 
 		// Example of how to get data out of specific layers
-		//        for _, layerType := range decoded {
-		//            switch layerType {
-		//                case layers.LayerTypeIPv4:
-		//                    log.Printf("src: %v, dst: %v, proto: %v", ip.SrcIP, ip.DstIP, ip.Protocol)
-		//            }
-		//        }
+		        for _, layerType := range decoded {
+		            switch layerType {
+		                case layers.LayerTypeIPv4:
+		                    log.Printf("src: %v, dst: %v, proto: %v", ip.SrcIP, ip.DstIP, ip.Protocol)
+		            }
+		        }
 
 		if config.pcapWriter != nil {
 			config.pcapWriter.WritePacket(ci, data)
