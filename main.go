@@ -53,10 +53,10 @@ func main() {
 	// Listen on the interface
 	var sniffer Sniffer
 	if config.enableAF {
-		sniffer = &PcapSniffer{}
+		sniffer = &AfpacketSniffer{}
 		log.Print("Using afpacket to sniff packets")
 	} else {
-		sniffer = &AfpacketSniffer{}
+		sniffer = &PcapSniffer{}
 		log.Print("Using libpcap to sniff packets")
 	}
 
