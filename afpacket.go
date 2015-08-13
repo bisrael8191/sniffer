@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"code.google.com/p/gopacket"
-	"code.google.com/p/gopacket/afpacket"
+	"github.com/google/gopacket"
+	"github.com/google/gopacket/afpacket"
 )
 
 // afpacket version of the gopacket library

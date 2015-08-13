@@ -7,7 +7,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"code.google.com/p/gopacket/pcapgo"
+	"github.com/google/gopacket/pcapgo"
 	"github.com/vharitonsky/iniflags"
 )
 
